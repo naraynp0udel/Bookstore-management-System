@@ -1,1 +1,2 @@
 # Bookstore-management-System
+Book Store Management System is the web application to automate all kinds of operations in the book shop. The purpose of this software is to manage the books in the book store. Generally, it includes the Order Processing, Stock Management ,Accounts Management and so on. Here we are trying to develop such type system which provides the automation on the any type of the bookstore i.e. a store which has the type system which provides the facility to the customers of the store to purchase the books from the shop without any complexity.
