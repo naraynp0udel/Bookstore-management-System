@@ -13,11 +13,17 @@
             <a href="#" target="_blank">About us</a>
             <a href="#" target="_blank">Contact us</a>
         </div>
-        <div class="main-body">
-
+        <div>
+        <form method="POST" action="index.html">
+        <label>Email</label>
+        <input type="email">
+        
+        <label>Password</label>
+        <input type="password">
         </div>
+        </form>
         <div class="foot">
             &copy;2020 Bookstore Management System
         </div>
-    </body>
+      </body>
 </html>
