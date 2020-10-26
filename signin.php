@@ -7,11 +7,15 @@
         </title>
     </head>
     <body>
-        <div class="top">
-            <a href="#" target="_blank">Home</a>
-            <a href="#" target="_blank">Used Books</a>
-            <a href="#" target="_blank">About us</a>
-            <a href="#" target="_blank">Contact us</a>
+        <div class="container">
+            <li class="nav-item">
+            <a href="#" target="_blank">Home</a></li>
+            <li class="nav-item">
+            <a href="#" target="_blank">Used Books</a></li>
+            <li class="nav-item">
+            <a href="#" target="_blank">About us</a></li>
+            <li class="nav-item">
+            <a href="#" target="_blank">Contact us</a></li>
         </div>
         <div>
         <form method="POST" action="index.html">
