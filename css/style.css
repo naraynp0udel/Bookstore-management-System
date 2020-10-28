@@ -2,8 +2,15 @@
     margin: none;
     padding: none;
     font-size: 16px;
+    text-decoration: none;
 }
 
-.container {
-    text-decoration-style: none;
+.nav-item {
+    display: inline-flex;
+    background-color: aqua;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border-style: inset groove ridge outset;
+    justify-content: space-around;
+    align-items: flex-end;
 }
