@@ -18,12 +18,12 @@
             <a href="#" target="_blank">Contact us</a></li>
         </div>
         <div>
-        <form method="POST" action="index.html">
+        <form method="POST" action="index.php">
         <label>Email</label>
-        <input type="email">
-        
+        <input type="email" name="usr_email">
         <label>Password</label>
-        <input type="password">
+        <input type="password" name="usr_password">
+        <input type="submit" value="Sign in">
         </div>
         </form>
         <div class="foot">
