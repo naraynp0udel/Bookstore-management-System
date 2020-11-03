@@ -5,11 +5,11 @@ if(isset($_POST['Sign_up']))
 {
     register_users();
 }
-// if(isset($_POST['Sign_in']))
-// {
-//     Verify_user();
-//     Login();
-// }
+if(isset($_POST['Sign_in']))
+ {
+    //  verify_user();
+     login();
+ }
 
 function register_users()
 {
@@ -45,8 +45,27 @@ function register_users()
     }
 
 }
-// function Verify_user()
-// {
-//     echo "verification on construxtion";
-// } 
+function login()
+{
+    $con=connectdb();
+    echo "verification on construxtion";
+    $query = "Select Email,Password from registered_users where Email =?";
+    $stmt=$con->prepare($query);
+    $stmt->bindparam(1,$usr_email);
+    $usr_email=strip_tags(trim($_POST['usr_email'],""));
+    $usr_password=$_POST['usr_password'];
+    $stmt->execute();
+    $result=$stmt->fetch();
+    if($usr_password===$result['Password'])
+    {
+        echo "Connection succed";
+        header("location: ../index.php");
+    }
+    else{
+        die("get the fooooooooookkkkkkkkkkkkkkiiiiiiiiiiiiiinnnnnnnnnnnnnnnnnnggggggggggg out of my system" );
+        header("location: ../signin.php ");
+    }
+
+    
+} 
 ?>

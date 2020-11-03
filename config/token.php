@@ -5,5 +5,5 @@ if(empty($_SESSION['token']))
     $_SESSION['token']=bin2hex(random_bytes(32));
     $_SESSION['expirytime']=time()+3;
 }
-print_r($_SESSION);
+
 ?>

@@ -11,7 +11,6 @@ function connectdb()
     try{
         $conn= new PDO($dsn,$db_user,$db_password); #Connection for Mysql
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); #PDO::ERRMODE_EXCEPTION Throws a PDOException if an error occurs
-        echo "Connected";
         return $conn;
 //         $query = "INSERT INTO registered_users(f_name,m_name,l_name, Email,Phone_Num, Password) VALUES (?,?,?,?,?,?)";
 // $f='fsfs';
