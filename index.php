@@ -16,6 +16,10 @@
             <a href="#" target="_blank">About us</a></li>
             <li class="nav-item">
             <a href="#" target="_blank">Contact us</a></li>
+            <li class="nav-item">
+            <a href="signin.php" target="_blank">Login</a></li>
+            <li class="nav-item">
+            <a href="signup.php" target="_blank">Register</a></li>
         </div>
         <div class="main-body">
         
