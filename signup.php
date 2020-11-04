@@ -1,5 +1,5 @@
 <?php 
-include_once 'config/token.php'; ?>
+include_once 'config/auth.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -59,7 +59,8 @@ include_once 'config/token.php'; ?>
             <input type="Password " name="usr_password" id="upass" placeholder="Password"><br>
         <label for="ucpass"> Confirm Password</label>
             <input type="Password " name="usr_cpassword" id="ucpass" placeholder="Confirm Password"><br>
-            <input type="hidden" name="token" value="<?php $_SESSION['token']; ?>">
+    
+            <?php insert_token(); ?>
 
         <input type="Submit" value="Sign up" name="Sign_up" onclick="checkpass();">
     </form>

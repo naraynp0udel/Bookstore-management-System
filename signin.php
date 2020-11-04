@@ -1,4 +1,4 @@
-<?php include_once 'config/token.php'; ?>
+<?php include_once 'config/auth.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,9 +27,9 @@
         <label for="usr_email">Email</label>
         <input type="email" name="usr_email" id="usr_email" placeholder="Email"><br>
         <label for="usr_password">Password</label>
-        <input type="password" name="usr_password" id="usr_password" placeholder="Password">
-        <input type="hidden" name="token" value="<?= $_SESSION['token']; ?>">
-        <input type="submit" value="Sign_in" name="Sign_in">
+        <input type="password" name="usr_password" id="usr_password" placeholder="Password"><br>
+        <?php insert_token(); ?><br>
+        <input type="submit" value="Sign in" name="Sign_in">
         </div>
         </form>
         <div class="foot">

@@ -1,15 +1,23 @@
 <?php
 include_once 'dbconnect.php';
+include_once 'auth.php';
 
 if(isset($_POST['Sign_up']))
 {
+    verify_token(); 
     register_users();
 }
 if(isset($_POST['Sign_in']))
  {
-    //  verify_user();
+    if(verify_token())
+    {
      login();
  }
+else
+{
+    echo "fucked up";
+}
+}
 
 function register_users()
 {
