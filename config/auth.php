@@ -30,12 +30,14 @@ function verify_token()
         }
         else{
             echo "Invalid CSRF token";
-            return false;
+            unset($_SESSION['token']);
+            die();
         }
     }
     else{
         echo "CSRF token is missing";
-        return false;
+        unset($_SESSION['token']);
+        die();
     }
 }
 ?>

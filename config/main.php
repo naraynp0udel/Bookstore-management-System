@@ -9,15 +9,10 @@ if(isset($_POST['Sign_up']))
 }
 if(isset($_POST['Sign_in']))
  {
-    if(verify_token())
-    {
+    verify_token(); 
      login();
  }
-else
-{
-    echo "fucked up";
-}
-}
+
 
 function register_users()
 {
