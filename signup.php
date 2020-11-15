@@ -1,5 +1,7 @@
 <?php 
-include_once 'config/auth.php'; ?>
+include_once 'config/auth.php'; 
+include "header.php";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -20,29 +22,7 @@ include_once 'config/auth.php'; ?>
     </script>
 </head>
 <body>
-    <div class="container">
-        <li class="nav-item">
-            <a href="index.php" target="_blank"> Home
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" target="_blank"> Used Books
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" target="_blank"> About us
-             </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" target="_blank"> Contact us
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="signin.php" target="_blank">Login</a>
-        </li>
-        <li class="nav-item">
-            <a href="signup.php" target="_blank">Register</a>
-        </li>
+    
     </div>
     <form class="register-form" method="POST" action="config/main.php">
         <label for="f_name"> First Name </label>
@@ -64,8 +44,6 @@ include_once 'config/auth.php'; ?>
 
         <input type="Submit" value="Sign up" name="Sign_up" onclick="checkpass();">
     </form>
-    <div class="foot ">
-        &copy; 2020 Bookstore Management System
-    </div>
+<?php include "footer.php";?>
 </body>
 </html>

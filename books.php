@@ -40,5 +40,6 @@ include_once 'config/auth.php'; ?>
              <?php insert_token(); ?>
              <input type="Submit" name="List_Book" value="List Book"><br>
     </form>
+    <?php  include "footer.php";?>
 </body>
 </html>

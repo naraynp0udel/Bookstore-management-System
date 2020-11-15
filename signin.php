@@ -1,4 +1,6 @@
-<?php include_once 'config/auth.php'; ?>
+<?php include_once 'config/auth.php'; 
+include "header.php";
+include "footer.php";?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,21 +10,7 @@
         </title>
     </head>
     <body>
-        <div class="container">
-            <li class="nav-item">
-            <a href="index.php" target="_blank">Home</a></li>
-            <li class="nav-item">
-            <a href="#" target="_blank">Used Books</a></li>
-            <li class="nav-item">
-            <a href="#" target="_blank">About us</a></li>
-            <li class="nav-item">
-            <a href="#" target="_blank">Contact us</a></li>
-            <li class="nav-item">
-            <a href="signin.php" target="_blank">Login</a></li>
-            <li class="nav-item">
-            <a href="signup.php" target="_blank">Register</a></li>
-        </div>
-        <div>
+      
         <form class="login-form" method="POST" action="config/main.php">
         <label for="usr_email">Email</label>
         <input type="email" name="usr_email" id="usr_email" placeholder="Email"><br>
@@ -30,10 +18,8 @@
         <input type="password" name="usr_password" id="usr_password" placeholder="Password"><br>
         <?php insert_token(); ?><br>
         <input type="submit" value="Sign in" name="Sign_in">
-        </div>
+        
         </form>
-        <div class="foot">
-            &copy;2020 Bookstore Management System
-        </div>
+        <?php include "footer.php";?>
       </body>
 </html>

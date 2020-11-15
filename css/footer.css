@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-style: italic;
+}
+
+.foot {
+    margin-top: 90vh;
+    text-decoration-color: blue;
+}
+
+.left {
+    float: left;
+}
+
+.middle {
+    float: 50vh;
+}
+
+.right {
+    float: right;
+}
+
+.column {
+    display: inline-block;
+    justify-content: space-around;
+    width: 33.33%;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
