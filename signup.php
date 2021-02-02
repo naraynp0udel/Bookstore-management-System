@@ -23,7 +23,8 @@ include "header.php";
 </head>
 <body>
     
-    </div>
+    <div class="container-register-form" align="center">
+        
     <form class="register-form" method="POST" action="config/main.php">
         <label for="f_name"> First Name </label>
             <input type="text" name="f_name" id="f_name" placeholder="First Name"><br>
@@ -36,14 +37,16 @@ include "header.php";
         <label for="usr_tel"> Contact Number</label>
             <input type="tel" name="usr_tel" id="usr_tel" placeholder="Phone Number"><br>
         <label for="upass"> Password</label>
-            <input type="Password " name="usr_password" id="upass" placeholder="Password"><br>
+            <input type="password" name="usr_password" id="upass" placeholder="Password"><br>
         <label for="ucpass"> Confirm Password</label>
-            <input type="Password " name="usr_cpassword" id="ucpass" placeholder="Confirm Password"><br>
+            <input type="password" name="usr_cpassword" id="ucpass" placeholder="Confirm Password"><br>
     
             <?php insert_token(); ?>
 
         <input type="Submit" value="Sign up" name="Sign_up" onclick="checkpass();">
     </form>
+    
+    </div>
 <?php include "footer.php";?>
 </body>
 </html>

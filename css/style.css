@@ -1,0 +1,43 @@
+*{
+    margin: none;
+    padding: none;
+}
+.container-login-form{
+    /* border: 1px solid black; */
+    width: 50%;
+    
+}
+.login-form {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container-register-form
+{
+    width: 50%;
+    /* border: 1px solid black; */
+}
+.register-form{
+display: block;
+justify-content: center;
+
+
+}
+input[type=email],
+input[type=password],
+input[type=text],
+input[type=tel]
+{
+    height: 25px;
+    width: 50vh;
+    border-radius: 5%;
+    border-spacing: 20px;
+    display: block;
+    
+}
+input[type=submit]{
+    height: 25px;
+    width:50px;
+    border-radius: 15px;;
+}

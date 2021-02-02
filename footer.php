@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" href="css/footer.css">
-    <title>Book Store Management System</title>
-</head>
-
-<body>
-
-
     <div class="row">
         <div class="column left">
-             About Bookstore
+             <h3>About Bookstore</h3>
+             <p>BMS is an online bookstore, physically based in Butwal, Nepal, with an aim to create the largest community of book readers in 
+             Nepal. You can browse and buy books online at the lowest everyday prices.</p>
         </div>
         <div class="column middle">
-             Quick Links
+        <h3>Quick Links</h3>
         </div>
         <div class="column right">
-            Others
+        <h3>Others</h3>
+        <li class="nav-item-footer">
+            <a href="#" target="_blank">About us</a></li>
+            <li class="nav-item-footer">
+            <a href="#" target="_blank">Blogs</a></li>
+            <li class="nav-item-footer">
+            <a href="#" target="_blank">Carrers</a></li>
+            <li class="nav-item-footer">
+            <a href="#" target="_blank">FAQs</a></li>
         </div>
     </div>
     <div class="">
@@ -34,8 +33,5 @@
 
     </div>
     <div class="foot">
-        &copy;2020 Bookstore Management System
+       <center> &copy;2020 Bookstore Management System</center>
     </div>
-</body>
-
-</html>

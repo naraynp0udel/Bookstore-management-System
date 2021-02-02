@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet"  href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
         <link rel="icon" href="images\favicon\favicon-32x32.png" type="image/x-icon">
         <title>
             Book Store Management System
@@ -30,5 +31,3 @@
             <a href="signup.php" target="_blank">Register</a></li>
         </div>
 </div>
-        </body>
-</html>
