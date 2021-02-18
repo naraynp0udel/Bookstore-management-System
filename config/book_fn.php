@@ -69,31 +69,32 @@ function show_list_of_books()
     
     if($Book_name&$Author_name)#$Book_name&$Author_name&$Publication&$Edition&$ISBN
     {
-        $query="select `Book Name` from books where ?=? or ?=?";
+        $query="select `Book Name`,`image` from books where `Book Name`=? and `Author Name`=?";
         $stmt=$con->prepare($query);
         $stmt->bindparam(1,$Book_name);
-        $stmt->bindparam(2,$Book_name);
-        $stmt->bindparam(3,$Author_name);
-        $stmt->bindparam(4,$Author_name);
+        $stmt->bindparam(2,$Author_name);
         $stmt->execute();
         $results=$stmt->fetchAll();
         foreach ($results as $result)
         {
-        print($result[0]);
+            print($result[0]."<br>");
+            print($result[1]."<br>");
+            print($result[2]."<br>");
         }
     }
     elseif ($ISBN)
     {
-        $param="ISBN";
-        $query="select * from books where ?=? ";
+       
+        $query="select `Book Name`,`Stock`,`image` from books where `ISBN Number`=? ";
         $stmt=$con->prepare($query);
-        $stmt->bindparam(1,$param);
-        $stmt->bindparam(2,$ISBN);
+        $stmt->bindparam(1,$ISBN);
         $stmt->execute();
         $results=$stmt->fetchAll();
         foreach ($results as $result)
         {
-        print($result[2]);
+        print($result[0]."<br>");
+        print($result[1]."<br>");
+        print($result[2]."<br>");
         }
     }
 }
