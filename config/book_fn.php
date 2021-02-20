@@ -12,7 +12,16 @@ if(isset($_POST['List_Book']))
     verify_token();
     show_list_of_books();
 }
-
+if(isset($_POST['Delete_Book']))
+{
+    verify_token();
+    delete_book();
+}
+if(isset($_POST['Update_Book']))
+{
+    verify_token();
+    update_book();
+}
 function add_book()
 {
     $con=connectdb();
@@ -102,8 +111,39 @@ function show_list_of_books()
 
 function update_book()
 {
-$con=connectdb();
+    $con=connectdb();
+    if(isset($_POST['Update_Book']))
+    {
+    $Book_name=strip_tags(trim($_POST['Book_name']," "));
+    $Author_name=strip_tags(trim($_POST['Author_name'],""));
+    // $Publication=strip_tags(trim($_POST['Publication'],""));
+    // $Edition=strip_tags(trim($_POST['Edition'],""));
+    $ISBN=strip_tags(trim($_POST["ISBN"]," "));
+    $Stock=strip_tags(trim($_POST["Stock"]," "));
+    $query="Update books SET `Book Name`=? , `Author Name`=? ,`Stock`=? where `ISBN Number`=? ";
+        $stmt=$con->prepare($query);
+        $stmt->bindparam(1,$Book_name);
+        $stmt->bindparam(2,$Author_name);
+        $stmt->bindparam(3,$Stock);
+        $stmt->bindparam(4,$ISBN);
+        $stmt->execute();
 
-
+    }
+}
+function delete_book()
+{
+    $con=connectdb();  
+    if(isset($_POST['Delete_Book']))
+    { 
+        $Book_name=strip_tags(trim($_POST['Book_name']," "));
+        $Author_name=strip_tags(trim($_POST['Author_name'],""));
+        $ISBN=strip_tags(trim($_POST["ISBN"]," "));
+        $query="Delete from books where `Book Name`=? and `Author Name`=? and `ISBN Number`=? ";
+        $stmt=$con->prepare($query);
+        $stmt->bindparam(1,$Book_name);
+        $stmt->bindparam(2,$Author_name);
+        $stmt->bindparam(3,$ISBN);
+        $stmt->execute();
+    }
 }
 ?>
