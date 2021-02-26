@@ -11,21 +11,28 @@ include "header.php";
         Book Store Management System
     </title>
     <script>
-        function checkpass() {
-            if (document.getElementById("upass").innerHTML == document.getElementById("ucpass").innerHTML) {
-                console.log("gotcha");
-
-            } else {
-                alert("Check password");
-            }
-        }
-    </script>
+         function checkpass() {
+         err=0;
+         if( document.myForm.f_name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.f_ame.focus() ;
+            err++;
+            
+         }
+         if(err==0)
+         {
+         var msg="my name is "+document.myForm.Name.value;
+         return document.getElementById("f_ame").innerHTML=msg;
+         return document.write(msg);
+      }
+   }
+ </script>
 </head>
 <body>
     
     <div class="container-register-form" align="center">
         
-    <form class="register-form" method="POST" action="config/main.php">
+    <form class="register-form" name="myForm" method="POST" action="config/main.php">
         <label for="f_name"> First Name </label>
             <input type="text" name="f_name" id="f_name" placeholder="First Name"><br>
         <label for="m_name"> Middle Name </label>
